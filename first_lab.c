@@ -25,7 +25,8 @@ int main(int argc, char* argv[]) {
     }
     else if ((strcmp(argv[1], "-w") == 0) || (strcmp(argv[1], "--words") == 0))
     {
-        int n = 0, isword = 0;
+        int n = 0
+        int isWord = 0;
         int str = getchar();
         if (str == EOF) printf("incorect file name or file is empty");
         else
@@ -34,17 +35,17 @@ int main(int argc, char* argv[]) {
         {
             if ((str == '\n' || str == ' ' || str == '\t')  && isword == 1) 
             {
-                isword = 0;
+                isWord = 0;
                 n += 1;
             }
             else if (str != '\n' && str != ' ' && str != '\t') 
             {
-                isword = 1;
+                isWord = 1;
             }
             str = getchar();
         }
         
-        if (isword == 1) n +=1;  
+        if (isWord == 1) n +=1;  
         printf("%d", n);
         }
     }
